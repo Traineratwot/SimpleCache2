@@ -9,13 +9,12 @@ class CacheSystem(ABC):
     def __init__(self):
         self.clearOld()
 
-    def getKey(self, key: any = None, key_prefix: str = "") -> str:
+    def getKey(self, key: any = None) -> str:
         """
         serialize key return key_prefix + md5(pickle.dumps(key))
-        :param key_prefix:
         :param key:
         """
-        return key_prefix + get_md5_hash(pickle.dumps(key))
+        return get_md5_hash(pickle.dumps(key))
         pass
 
     def call(self, key: any, ttl: int, callback: Callable, *args, **kwargs) -> any:

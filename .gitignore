@@ -80,3 +80,4 @@ dmypy.json
 cython_debug/
 **/cache/
 .pypirc
+SimpleCache2/disk_cache/

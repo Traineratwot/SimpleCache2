@@ -21,7 +21,7 @@ class FileCache(CacheSystem):
 
     def exist(self, key: any) -> bool:
         path = self.getPath(key)
-        return os.path.exists(path) and self.getEndTime(path) < time()
+        return os.path.exists(path) and self.getEndTime(path) > time()
         pass
 
     def get(self, key: any) -> any:

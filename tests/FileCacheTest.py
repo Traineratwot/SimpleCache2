@@ -1,4 +1,5 @@
 import unittest
+from time import sleep
 
 from SimpleCache2 import simple_cache
 from SimpleCache2.FileCache import FileCache
@@ -32,7 +33,11 @@ class FileCacheTest(unittest.TestCase):
 
     def test5(self):
         def testFunc(name):
+            sleep(1)
             return f"hello world {name}"
+
+        g = self.cache.call('test5', 10, testFunc, 'Bob')
+        self.assertEqual("hello world Bob", g)
 
         g = self.cache.call('test5', 10, testFunc, 'Bob')
         self.assertEqual("hello world Bob", g)
@@ -41,6 +46,7 @@ class FileCacheTest(unittest.TestCase):
     def test6Decorator(self):
         @simple_cache(self.cache, 10)
         def testFunc(name):
+            sleep(1)
             return f"hello world {name}"
 
         self.assertEqual(testFunc('Bob'), testFunc('Bob'))

@@ -13,13 +13,10 @@ def simple_cache(cache_system: CacheSystem, ttl: int = 0, key_prefix: str = "", 
 
     def decorating_function(original_function):
         def wrapper(*args, **kwargs):
-            _key = ""
             if key:
-                _key = key
+                return cache_system.call(key, ttl, original_function, *args, )
             else:
-                _key = cache_system.getKey([args, kwargs], key_prefix)
-
-            return cache_system.call(_key, ttl, original_function, *args, )
+                return cache_system.call([key_prefix, args, kwargs], ttl, original_function, *args, )
 
         return wrapper
 
