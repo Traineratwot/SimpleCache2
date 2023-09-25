@@ -2,7 +2,7 @@ import pickle
 from abc import ABC, abstractmethod
 from typing import Callable
 
-from simple_cache.utils import get_md5_hash
+from SimpleCache2.utils import get_md5_hash
 
 
 class CacheSystem(ABC):

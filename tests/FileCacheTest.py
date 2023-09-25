@@ -1,7 +1,7 @@
 import unittest
 
-from simple_cache import simple_cache
-from simple_cache.FileCache import FileCache
+from SimpleCache2 import simple_cache
+from SimpleCache2.FileCache import FileCache
 
 
 class FileCacheTest(unittest.TestCase):

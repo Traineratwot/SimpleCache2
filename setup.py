@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="simple_cache",
+    name="SimpleCache2",
     version="1.0.0",
     author="Traineratwot",
     author_email="Traineratwot@yandex.ru",

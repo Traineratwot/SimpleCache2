@@ -1,4 +1,4 @@
-from simple_cache.CacheSystem import CacheSystem
+from SimpleCache2.CacheSystem import CacheSystem
 
 
 def simple_cache(cache_system: CacheSystem, ttl: int = 0, key_prefix: str = "", key: str = None):

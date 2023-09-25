@@ -4,7 +4,7 @@ from os import getenv
 from os.path import expanduser, expandvars, dirname, realpath, getmtime, getctime, join
 from time import time
 
-from simple_cache.CacheSystem import CacheSystem
+from SimpleCache2.CacheSystem import CacheSystem
 
 
 # os.path.getctime
