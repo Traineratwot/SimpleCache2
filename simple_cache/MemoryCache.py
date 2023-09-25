@@ -1,4 +1,4 @@
-from simple_cache.Cache import CacheSystem
+from simple_cache.CacheSystem import CacheSystem
 
 
 class MemoryCache(CacheSystem):

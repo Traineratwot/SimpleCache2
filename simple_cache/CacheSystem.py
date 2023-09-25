@@ -5,6 +5,8 @@ from typing import Callable
 
 
 class CacheSystem(ABC):
+    def __init__(self):
+        self.clearOld()
 
     def getKey(self, key: any = None, key_prefix: str = "") -> str:
         """
@@ -31,7 +33,7 @@ class CacheSystem(ABC):
         pass
 
     @abstractmethod
-    def exist(self, key: any) -> any:
+    def exist(self, key: any) -> bool:
         """
 
         :param key:
