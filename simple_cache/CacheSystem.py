@@ -1,7 +1,8 @@
 import pickle
 from abc import ABC, abstractmethod
-from hashlib import md5
 from typing import Callable
+
+from simple_cache.utils import get_md5_hash
 
 
 class CacheSystem(ABC):
@@ -14,7 +15,7 @@ class CacheSystem(ABC):
         :param key_prefix:
         :param key:
         """
-        return key_prefix + md5(pickle.dumps(key))
+        return key_prefix + get_md5_hash(pickle.dumps(key))
         pass
 
     def call(self, key: any, ttl: int, callback: Callable, *args, **kwargs) -> any:
@@ -49,7 +50,7 @@ class CacheSystem(ABC):
         pass
 
     @abstractmethod
-    def set(self, key: any, value: object, ttl: int = 0) -> object:
+    def set(self, key: any, value: object, ttl: int = 0):
         """
 
         :param key:
@@ -59,7 +60,7 @@ class CacheSystem(ABC):
         pass
 
     @abstractmethod
-    def delete(self, key: any) -> object:
+    def delete(self, key: any) -> bool:
         """
 
         :param key:
@@ -67,7 +68,7 @@ class CacheSystem(ABC):
         pass
 
     @abstractmethod
-    def clearOld(self) -> object:
+    def clearOld(self):
         pass
 
     pass
