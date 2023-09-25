@@ -11,7 +11,7 @@ setuptools.setup(
     description="Cache system for python",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/traineratwot/SimpleCache",
+    url="https://github.com/traineratwot/SimpleCache2",
     packages=setuptools.find_packages(),
     classifiers=(
         "Programming Language :: Python :: 3",
