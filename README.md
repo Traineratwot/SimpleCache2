@@ -5,7 +5,9 @@
 ```python
 from SimpleCache2 import simple_cache
 from SimpleCache2.FileCache import FileCache
+from SimpleCache2.LruCache import LruCache
 
+lru_cache = LruCache()
 cache = FileCache(cache_dir=None)
 
 
