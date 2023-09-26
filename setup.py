@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="SimpleCache2",
-    version="1.0.2",
+    version="1.1.0",
     author="Traineratwot",
     author_email="Traineratwot@yandex.ru",
     description="Cache system for python",
