@@ -2,6 +2,7 @@ import json
 import os.path
 from os import makedirs, getenv
 from os.path import dirname, exists, realpath, expanduser, expandvars
+from io import open
 
 from SimpleCache2.CacheSystem import CacheSystem
 

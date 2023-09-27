@@ -1,5 +1,6 @@
 import os.path
 import pickle
+from io import open
 from os import getenv
 from os.path import expanduser, expandvars, dirname, realpath, getmtime, getctime, join
 from time import time
