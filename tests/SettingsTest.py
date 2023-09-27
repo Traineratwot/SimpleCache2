@@ -2,16 +2,15 @@ import unittest
 from time import sleep
 
 from SimpleCache2 import simple_cache
-from SimpleCache2.FileCache import FileCache
+from SimpleCache2.Settings import Settings
 
 
-class FileCacheTest(unittest.TestCase):
+class SettingsTest(unittest.TestCase):
 
     def setUp(self):
-        self.cache = FileCache()
+        self.cache = Settings()
 
     def test(self):
-        print(self.cache.cache_dir)
         self.cache.set('test1', (1, 2), 10)
         g = self.cache.get('test1')
         self.assertEqual((1, 2), g)

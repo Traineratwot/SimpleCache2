@@ -1,13 +1,18 @@
 # SimpleCache
- 
-##  Usage
+
+## Usage
 
 ```python
 from SimpleCache2 import simple_cache
 from SimpleCache2.FileCache import FileCache
-from SimpleCache2.LruCache import LruCache
+from SimpleCache2.MemoryCache import MemoryCache
+from SimpleCache2.Settings import Settings
 
-lru_cache = LruCache()
+# save cache in python variable 
+memory = MemoryCache()
+# save cache in one json file 
+settings = Settings(settings_file="path/to/test.json")
+# save cache in many binary files
 cache = FileCache(cache_dir=None)
 
 
@@ -29,6 +34,7 @@ cache.clearOld()  # bool
 ```
 
 ## Api
+
 You can write you self cache class:
 
 ```python

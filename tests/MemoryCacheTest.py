@@ -2,13 +2,13 @@ import unittest
 from time import sleep
 
 from SimpleCache2 import simple_cache
-from SimpleCache2.LruCache import LruCache
+from SimpleCache2.MemoryCache import MemoryCache
 
 
-class FileCacheTest(unittest.TestCase):
+class MemoryCacheTest(unittest.TestCase):
 
     def setUp(self):
-        self.cache = LruCache()
+        self.cache = MemoryCache()
 
     def test(self):
         self.cache.set('test1', (1, 2), 10)
@@ -51,3 +51,6 @@ class FileCacheTest(unittest.TestCase):
         self.assertEqual(testFunc('Bob'), testFunc('Bob'))
         self.assertNotEqual(testFunc('Bob'), testFunc('Dan'))
         pass
+
+    def test7(self):
+        self.assertNotEqual("/test/bob/index.php", self.cache.getKey('/test/bob/index.php'))

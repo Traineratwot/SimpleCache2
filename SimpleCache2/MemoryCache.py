@@ -3,7 +3,7 @@ import pickle
 from SimpleCache2.CacheSystem import CacheSystem
 
 
-class LruCache(CacheSystem):
+class MemoryCache(CacheSystem):
     memory: {}
 
     def __init__(self):
