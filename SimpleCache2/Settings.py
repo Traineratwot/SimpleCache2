@@ -19,7 +19,10 @@ class Settings(CacheSystem):
         self.load()
 
     def __del__(self):
-        self.save()
+        try:
+            self.save()
+        except ValueError:
+            pass
         pass
 
     def __set__(self, instance, value):
